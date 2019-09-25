@@ -7,7 +7,10 @@
 // if ship survives attacks user 
 // if user survives and destroys ship, option to retreat or advance 
 // 
-let randomHull = 0;
+const randomStats = (max, min) => {
+	return Math.floor(Math.random() *(max - min + 1) + min)
+}
+console.log(randomStats(6,3));
 const userShip = {
 	name: "USS Assembly",
 	hull: 20,
@@ -20,20 +23,25 @@ const userShip = {
 }
 userShip.attack()
 
-const alienShip = {
-	hull: randomHull,
-	//firepower: randomFirepower,
-	//accuracy: randAccuracy,
+//class AlienShip = {
+//	hull: function randomStats(){
+//	return Math.floor(Math.random() *(6 - 3 + 1) + 3)
+//}
+//	}
 
+const game = {
+	aliensShip: [],
+	start(num){
+		for(let i = 0; i <= 6; i++){
+		  game.aliensShip.push[i]
+		} 
+	} 
 }
-
-const randomStats = (max, min) => {
-
-return	Math.floor(Math.random() *(max - min+ 1)+ min)
-	
-}
-console.log(randomStats(6, 3));
-
+game.start(1)
+game.start(2)
+game.start(3)
+game.start(4)
+console.log(game.aliensShip);
 
 
 
