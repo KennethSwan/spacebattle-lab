@@ -7,21 +7,7 @@
 // if ship survives attacks user 
 // if user survives and destroys ship, option to retreat or advance 
 // 
-const randomStats = (max, min) => {
-	return Math.floor(Math.random() *(max - min + 1) + min)
-}
-console.log(randomStats(6,3));
-const userShip = {
-	name: "USS Assembly",
-	hull: 20,
-	firepower: 5,
-	accuracy: .7,	
-    attack(){
-		console.log("attack");
-	} 
 
-}
-userShip.attack()
 
 //class AlienShip = {
 //	hull: function randomStats(){
@@ -29,16 +15,8 @@ userShip.attack()
 //}
 //	}
 
-const game = {
-	aliensShip: [],
-	start(){
-		for(let i = 0; i <= 6; i++){
-		game.aliensShip.push({i});
-		} 
-	} 
-}
-game.start();
-console.log(game.aliensShip);
+
+
 
 const playerShip = {
 	name: 'USS Assembly',
@@ -58,15 +36,22 @@ class Alien {
 	}
 }
 
-const alien1 = new Alien('Alien1')
-console.log(alien1);
-const alien2 = new Alien('Alien2')
-console.log(alien2)
-const alien3 = new Alien('Alien3')
-console.log(alien3)
-const alien4 = new Alien('Alien4')
-console.log(alien4)
-const alien5 = new Alien('Alien5')
-console.log(alien5)
-const alien6 = new Alien('Alien6')
-console.log(alien6)
+const game = {
+	aliensArr: [],
+	start(){
+		const alien1 = new Alien('Alien1')
+		game.aliensArr.push(alien1);
+		const alien2 = new Alien('Alien2')
+		game.aliensArr.push(alien2)
+		const alien3 = new Alien('Alien3')
+		game.aliensArr.push(alien3)
+		const alien4 = new Alien('Alien4')
+		game.aliensArr.push(alien4)
+		const alien5 = new Alien('Alien5')
+		game.aliensArr.push(alien5)
+		const alien6 = new Alien('Alien6')
+		game.aliensArr.push(alien6)
+	}
+}
+game.start();
+
