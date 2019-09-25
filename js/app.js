@@ -31,21 +31,33 @@ userShip.attack()
 
 const game = {
 	aliensShip: [],
-	start(num){
+	start(){
 		for(let i = 0; i <= 6; i++){
-		  game.aliensShip.push[i]
+		game.aliensShip.push({i});
 		} 
 	} 
 }
-game.start(1)
-game.start(2)
-game.start(3)
-game.start(4)
+game.start();
 console.log(game.aliensShip);
 
 
+class Alien {
+	constructor(num){
+		this.hull = Math.floor(Math.random() *(6 - 3 + 1) + 3);
+		this.firepower = Math.floor(Math.random() *(4 - 2 + 1) + 2);
+		this.accuracy = Math.floor(Math.random() * (8 - 6 + 1) + 6) / 10;
+	}
+}
 
-
-
-
-
+const alien1 = new Alien('Alien1')
+console.log(alien1);
+const alien2 = new Alien
+console.log(alien2)
+const alien3 = new Alien
+console.log(alien3)
+const alien4 = new Alien
+console.log(alien4)
+const alien5 = new Alien
+console.log(alien5)
+const alien6 = new Alien
+console.log(alien6)
