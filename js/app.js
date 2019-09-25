@@ -54,4 +54,5 @@ const game = {
 	}
 }
 game.start();
+console.log(game.aliensArr)
 
